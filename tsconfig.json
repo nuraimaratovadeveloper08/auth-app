@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "target": "esnext", // Версия JavaScript, которую TypeScript скомпилирует
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ], // Библиотеки, доступные в вашем проекте
+    "allowJs": true, // Разрешить импорт JS-файлов
+    "skipLibCheck": true, // Пропустить проверку типов в node_modules
+    "strict": true, // Включить строгий режим TypeScript
+    "forceConsistentCasingInFileNames": true, // Убедиться, что пути к файлам совпадают по регистру
+    "noEmit": true, // Не генерировать JavaScript-файлы
+    "module": "esnext", // Модульная система
+    "moduleResolution": "node", // Как TypeScript ищет модули
+    "resolveJsonModule": true, // Поддержка JSON как модулей
+    "isolatedModules": true, // Требуется для Next.js
+    "jsx": "preserve", // Обработка JSX (Next.js обрабатывает его сам)
+    "incremental": true, // Ускорение компиляции
+    "baseUrl": ".", // Базовый путь для импорта модулей
+    "paths": {
+      "@/components/*": [
+        "src/components/*"
+      ],
+      "@/pages/*": [
+        "src/pages/*"
+      ],
+      "@/styles/*": [
+        "src/styles/*"
+      ]
+    },
+    "esModuleInterop": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ], // Включённые файлы
+  "exclude": [
+    "node_modules"
+  ] // Исключённые файлы
+}
